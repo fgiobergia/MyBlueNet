@@ -32,7 +32,7 @@ int main () {
 				connect (bt_sd, (struct sockaddr*)&addr, sizeof (addr));
 				req = _recv (c_sd, &i, FROM_NET);
 				// This is going to be a temporary solution, 
-				// I'll fix it soon (when I'll get what's the metter xD)
+				// I'll fix it soon (first of all I'll try to find the problem xD)
 				if (!_send (bt_sd, req, i, TO_BT)) {
 					_send (c_sd, ERROR_SEND, strlen (ERROR_SEND), TO_BT);
 					close (bt_sd);
