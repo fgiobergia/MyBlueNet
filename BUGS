@@ -1,0 +1,25 @@
+[ENG]
+
+Right now there's only one bug I've found, It's very nasty..
+In a few words sometimes the connection between client and server doesn't go right, and errno is set on
+EBUSY, other times the connection goes right, but send () fails, returns me -1 and errno is set on ENOTCONN.
+I think the errors are given due to the same issue, but I haven't still solved it.
+As temporary fix I send a 404 error to the browser when necessary, but I'll try to solve soon this 
+problem.
+If someone discovers the reason of that bug I'll be grateful if he contact me by email, the address is
+darkjoker93@gmail.com, thanks :-)
+
+
+[ITA]
+
+Attualmente c'è solo un bug (che ho trovato), che però è molto fastidioso..
+In poche parole delle volte non avviene correttamente la connessione tra client e server e mi viene
+settato errno su EBUSY, altre volte la connessione avviene ma fallisce la send, che mi ritorna -1 ed
+errno è settato su ENOTCONN.
+Penso che gli errori siano dovuti allo stesso motivo, ma non sono riuscito a individuarlo.
+Come fix temporaneo invio un 404 al browser nel caso in cui si presenta quest'errore, ma
+cercherò di risolvere il più presto possibile il problema.
+Se qualcuno scoprisse il motivo dell'errore gli sarei grato se me lo segnalasse via mail, l'indirizzo
+è darkjoker93@gmail.com, grazie :-)
+
+

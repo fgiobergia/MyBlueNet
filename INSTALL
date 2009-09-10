@@ -1,0 +1,57 @@
+[ENG]
+
+Before compiling you have to edit net.h, changing `DEVICE` constant, using the address of the bluetooth
+device of the server.
+You can know it launching:
+
+$ hcitool dev
+
+Copy the address (it looks like 'XX:XX:XX:XX:XX:XX') in the `DEVICE` constant; you can also edit the port
+where the client listens to, the default one is 12345.
+To compile the sources you can run install.h, whose work is to compile server.c and client.c.
+Before running install.h make sure the bluetooth libraries (BlueZ) are installed.
+
+$ bash install.sh
+
+Now you have to copy `client` on the machine not connected to internet, and `server` on the computer linked
+to the router.
+From the client computer you have to change your browser's settings (I tested the whole project with Firefox),
+setting as proxy 127.0.0.1 and as port 12345 (or the one you specified in net.h).
+Now you can run the server and the client on the tho computers:
+
+./client 
+
+./server
+
+Now it's possibile to use normally the browser, even if your computer will receive data from the server
+you launched instead of from the net.
+
+
+[ITA]
+
+Prima di compilare bisogna editare il file net.h, modificando la costante `DEVICE`, mettendo 
+l'address del dispositivo bluetooth del server.
+Per saperlo, basta un:
+
+$ hcitool dev
+
+Copiate l'indirizzo (che ha un formato come 'XX:XX:XX:XX:XX:XX') in `DEVICE`, potete anche modificare
+la porta sulla quale si mette in ascolto il client, di default è 12345.
+Per compilare potete eseguire il file install.sh, che compila semplicemente client e server.
+Accertatevi, prima di eseguire install.sh di avere le librerie bluetooth (di BlueZ) installate.
+
+$ bash install.sh
+
+A questo punto bisogna copiare l'eseguibile `client` sulla macchina non connessa  a internet, mentre
+il server va sul computer che ha la connessione.
+Ora dal client modificate le impostazioni del vostro browser (io ho eseguito i test con Firefox) 
+impostando come proxy 127.0.0.1 sulla porta 12345 (o quella che avete specificato in net.h).
+Bisogna ora lanciare il server e il client sulle due macchine dove si trovano:
+
+./client
+
+./server
+
+Ora potete utilizzare il vostro browser normalmente, anche se la vostra macchina riceverà i dati non
+direttamente dal Web ma dal server che avrete lanciato.
+
